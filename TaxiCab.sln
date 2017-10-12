@@ -5,6 +5,18 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiCab", "TaxiCab\TaxiCab.csproj", "{E1F783AC-0E6E-4077-9848-5F3849766BC4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiCab.Core", "TaxiCab.Core\TaxiCab.Core.csproj", "{582A421E-4D29-4647-8BE5-0ECCCA2083F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiCab.Infrastructure", "TaxiCab.Infrastructure\TaxiCab.Infrastructure.csproj", "{1C32CBC2-B8CD-4EFE-9713-CCDB44886DF8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiCab.CompositionRoot", "TaxiCab.CompositionRoot\TaxiCab.CompositionRoot.csproj", "{D54C0237-9D28-4CA5-ABC6-9AA985C58FAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test Projects", "Test Projects", "{0513E4DB-1A5D-4857-9E6D-F8878A81DF6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiCab.UnitTests", "TaxiCab.UnitTests\TaxiCab.UnitTests.csproj", "{A21C9911-DFB9-4BC4-B37A-CB74060C1EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaxiCab.IntegrationTests", "TaxiCab.IntegrationTests\TaxiCab.IntegrationTests.csproj", "{CE9E4B24-AD7B-41AD-B523-A0581A336F01}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,8 +27,32 @@ Global
 		{E1F783AC-0E6E-4077-9848-5F3849766BC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1F783AC-0E6E-4077-9848-5F3849766BC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1F783AC-0E6E-4077-9848-5F3849766BC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{582A421E-4D29-4647-8BE5-0ECCCA2083F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{582A421E-4D29-4647-8BE5-0ECCCA2083F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{582A421E-4D29-4647-8BE5-0ECCCA2083F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{582A421E-4D29-4647-8BE5-0ECCCA2083F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C32CBC2-B8CD-4EFE-9713-CCDB44886DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C32CBC2-B8CD-4EFE-9713-CCDB44886DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C32CBC2-B8CD-4EFE-9713-CCDB44886DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C32CBC2-B8CD-4EFE-9713-CCDB44886DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D54C0237-9D28-4CA5-ABC6-9AA985C58FAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D54C0237-9D28-4CA5-ABC6-9AA985C58FAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D54C0237-9D28-4CA5-ABC6-9AA985C58FAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D54C0237-9D28-4CA5-ABC6-9AA985C58FAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21C9911-DFB9-4BC4-B37A-CB74060C1EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21C9911-DFB9-4BC4-B37A-CB74060C1EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21C9911-DFB9-4BC4-B37A-CB74060C1EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21C9911-DFB9-4BC4-B37A-CB74060C1EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE9E4B24-AD7B-41AD-B523-A0581A336F01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE9E4B24-AD7B-41AD-B523-A0581A336F01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE9E4B24-AD7B-41AD-B523-A0581A336F01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE9E4B24-AD7B-41AD-B523-A0581A336F01}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A21C9911-DFB9-4BC4-B37A-CB74060C1EAC} = {0513E4DB-1A5D-4857-9E6D-F8878A81DF6C}
+		{CE9E4B24-AD7B-41AD-B523-A0581A336F01} = {0513E4DB-1A5D-4857-9E6D-F8878A81DF6C}
 	EndGlobalSection
 EndGlobal

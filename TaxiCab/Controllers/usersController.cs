@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using AutoClutch.Core.Interfaces;
 using AutoClutch.Controller;
+using TaxiCab.Core.Models;
 
 namespace TaxiCab.Controllers
 {

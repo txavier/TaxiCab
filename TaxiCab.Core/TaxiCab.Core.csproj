@@ -128,6 +128,7 @@
     <Compile Include="Interfaces\ILogService.cs" />
     <Compile Include="Objects\EventType.cs" />
     <Compile Include="Interfaces\IMeteredStrategyRule.cs" />
+    <Compile Include="Interfaces\IMeteredRateStrategyService.cs" />
     <Compile Include="Services\MeteredRateStrategyService.cs" />
     <Compile Include="Services\MeteredStrategyNewYorkRule.cs" />
     <Compile Include="Services\MeteredStrategyNightRule.cs" />

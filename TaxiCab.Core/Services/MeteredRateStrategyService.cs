@@ -9,7 +9,7 @@ using TaxiCab.Core.Models;
 
 namespace TaxiCab.Core.Services
 {
-    public class MeteredRateStrategyService
+    public class MeteredRateStrategyService : IMeteredRateStrategyService
     {
         private List<IMeteredStrategyRule> _meteredStrategyRules;
 
@@ -36,7 +36,15 @@ namespace TaxiCab.Core.Services
 
         public double ApplyRules(cabRide cabRide, string loggedInUserName)
         {
+            // Use strategy pattern to implement fare calculations rules.
             var result = _meteredStrategyRules.Sum(r => r.IsMatch(cabRide, loggedInUserName) ? r.ApplyRule(cabRide, loggedInUserName) : 0);
+
+            // Get the fare upon entry and add it to te calculated sum.
+            double dummyHolder;
+
+            var fareUponEntry = double.TryParse(_settingService.GetSettingValueBySettingKey("fareUponEntry"), out dummyHolder) ? dummyHolder : 3;
+
+            result = result + fareUponEntry;
 
             return result;
         }

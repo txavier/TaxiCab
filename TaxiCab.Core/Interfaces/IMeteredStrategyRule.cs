@@ -2,7 +2,7 @@
 using AutoClutch.Core.Objects;
 using TaxiCab.Core.Models;
 
-namespace TaxiCab.Core.Services
+namespace TaxiCab.Core.Interfaces
 {
     public interface IMeteredStrategyRule
     {

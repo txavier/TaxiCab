@@ -24,6 +24,14 @@ namespace TaxiCab.Core.Services
             _meteredStrategyRules = new List<IMeteredStrategyRule>();
 
             _meteredStrategyRules.Add(new MeteredStrategyOneFifthLessThanSixRule(_settingService));
+
+            _meteredStrategyRules.Add(new MeteredStrategyNewYorkRule(_settingService));
+
+            _meteredStrategyRules.Add(new MeteredStrategyNightRule(_settingService));
+
+            _meteredStrategyRules.Add(new MeteredStrategyPeakHourRule(_settingService));
+
+            _meteredStrategyRules.Add(new MeteredStrategySixtyRule(_settingService));
         }
 
         public double ApplyRules(cabRide cabRide, string loggedInUserName)

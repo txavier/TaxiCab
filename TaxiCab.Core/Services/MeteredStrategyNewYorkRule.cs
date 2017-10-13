@@ -5,37 +5,45 @@ using System.Text;
 using System.Threading.Tasks;
 using AutoClutch.Core.Objects;
 using TaxiCab.Core.Models;
+using TaxiCab.Core.Interfaces;
 
 namespace TaxiCab.Core.Services
 {
-    class MeteredStrategyNewYorkRule : IMeteredStrategyRule
+    public class MeteredStrategyNewYorkRule : IMeteredStrategyRule
     {
-        public IEnumerable<Error> Errors
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        private ISettingService _settingService;
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public IEnumerable<Error> Errors { get; set; }
 
-        public double ApplyRule(cabRide cabRide, string loggedInUserName)
+        public MeteredStrategyNewYorkRule(ISettingService settingService)
         {
-            throw new NotImplementedException();
+            _settingService = settingService;
         }
 
         public IEnumerable<Error> GetErrors()
         {
-            throw new NotImplementedException();
+            return Errors;
+        }
+
+        public double ApplyRule(cabRide cabRide, string loggedInUserName)
+        {
+            double dummyHolder;
+
+            var newYorkStateSurcharge = double.TryParse(_settingService.GetSettingValueBySettingKey("newYorkStateSurcharge"), out dummyHolder) ? dummyHolder : .50;
+
+            return newYorkStateSurcharge;
         }
 
         public bool IsMatch(cabRide cabRide, string loggedInUserName)
         {
-            throw new NotImplementedException();
+            var state = _settingService.GetSettingValueBySettingKey("state") ?? "NY";
+
+            if(state == "NY" || state == "New York")
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

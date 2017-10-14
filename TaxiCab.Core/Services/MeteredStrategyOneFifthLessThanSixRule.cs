@@ -31,7 +31,7 @@ namespace TaxiCab.Core.Services
 
             var fareUnit = double.TryParse(_settingService.GetSettingValueBySettingKey("fareUnit"), out dummyHolder) ? dummyHolder : 0.35;
 
-            var result = (cabRide.milesBelowSixMph / 5) * fareUnit;
+            var result = (cabRide.milesBelowSixMph * 5) * fareUnit;
 
             return result.Value;
         }

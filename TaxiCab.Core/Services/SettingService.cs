@@ -39,7 +39,7 @@ namespace TaxiCab.Core.Services
 
             var result = GetSettingBySettingKey(settingKey);
 
-            var value = result.settingValue;
+            var value = result?.settingValue;
 
             return value;
         }

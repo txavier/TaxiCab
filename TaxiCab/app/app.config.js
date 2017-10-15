@@ -12,11 +12,6 @@
         $httpProvider.interceptors.push('authInterceptorService');
 
         $routeProvider
-            .when('/add-cab-ride', {
-                templateUrl: 'app/cab-ride/add-cab-ride.html',
-                controller: 'AddCabRideController',
-                controllerAs: 'vm'
-            })
             .when('/dashboard', {
                 templateUrl: 'app/user/dashboard.html',
                 controller: 'DashboardController',
@@ -27,7 +22,12 @@
                 controller: 'HomeController',
                 controllerAs: 'vm'
             })
-            .otherwise({ redirectTo: 'home' });
+            .when('/add-cab-ride', {
+                templateUrl: 'app/cab-ride/add-cab-ride.html',
+                controller: 'AddCabRideController',
+                controllerAs: 'vm'
+            })
+            .otherwise({ redirectTo: '/add-cab-ride' });
 
     }
 

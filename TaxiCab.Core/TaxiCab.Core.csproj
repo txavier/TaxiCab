@@ -129,12 +129,14 @@
     <Compile Include="Objects\EventType.cs" />
     <Compile Include="Interfaces\IMeteredStrategyRule.cs" />
     <Compile Include="Interfaces\IMeteredRateStrategyService.cs" />
+    <Compile Include="Interfaces\ICabRideService.cs" />
     <Compile Include="Services\MeteredRateStrategyService.cs" />
     <Compile Include="Services\MeteredStrategyNewYorkRule.cs" />
     <Compile Include="Services\MeteredStrategyNightRule.cs" />
     <Compile Include="Services\MeteredStrategyOneFifthLessThanSixRule.cs" />
     <Compile Include="Services\MeteredStrategyPeakHourRule.cs" />
     <Compile Include="Services\MeteredStrategySixtyRule.cs" />
+    <Compile Include="Services\CabRideService.cs" />
     <Compile Include="Services\SettingService.cs" />
     <Compile Include="Services\UserActionLogService.cs" />
     <Compile Include="Interfaces\IEnvironmentConfigSettingsGetter.cs" />

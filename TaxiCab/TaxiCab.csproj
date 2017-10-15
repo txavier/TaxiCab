@@ -295,6 +295,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\cabRidesController.cs" />
     <Compile Include="Controllers\usersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -566,22 +567,8 @@
   <ItemGroup>
     <Content Include="app\app.config.js" />
     <Content Include="app\app.module.js" />
-    <Content Include="app\author\add-author.controller.js" />
-    <Content Include="app\author\add-author.html" />
-    <Content Include="app\author\authors.controller.js" />
-    <Content Include="app\author\authors.html" />
-    <Content Include="app\author\update-author.controller.js" />
-    <Content Include="app\author\update-author.html" />
-    <Content Include="app\author\view-author.controller.js" />
-    <Content Include="app\author\view-author.html" />
-    <Content Include="app\blog-entry\add-blog-entry.controller.js" />
-    <Content Include="app\blog-entry\add-blog-entry.html" />
-    <Content Include="app\blog-entry\blog-entries.controller.js" />
-    <Content Include="app\blog-entry\blog-entries.html" />
-    <Content Include="app\blog-entry\update-blog-entry.controller.js" />
-    <Content Include="app\blog-entry\update-blog-entry.html" />
-    <Content Include="app\blog-entry\view-blog-entry.controller.js" />
-    <Content Include="app\blog-entry\view-blog-entry.html" />
+    <Content Include="app\cab-ride\add-cab-ride.controller.js" />
+    <Content Include="app\cab-ride\add-cab-ride.html" />
     <Content Include="app\home\home.controller.js" />
     <Content Include="app\home\home.html" />
     <Content Include="app\login\login.controller.js" />

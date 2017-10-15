@@ -47,6 +47,10 @@ namespace TaxiCab
                 .Returns<string>()
                 .Namespace = "usersService";
 
+            //builder.EntityType<cabRide>().Collection
+            //    .Function("GetFare")
+            //    .Returns<double>();
+
             config.MapODataServiceRoute(
                 routeName: "ODataRoute",
                 routePrefix: "odata",

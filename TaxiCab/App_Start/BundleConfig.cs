@@ -65,7 +65,8 @@ namespace TaxiCab
                       "~/app/author/authors.controller.js",
                       "~/app/author/view-author.controller.js",
                       "~/app/author/add-author.controller.js",
-                      "~/app/author/update-author.controller.js"
+                      "~/app/author/update-author.controller.js",
+                      "~/app/cab-ride/add-cab-ride.controller.js"
                       ));
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're

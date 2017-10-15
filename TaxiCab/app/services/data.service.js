@@ -36,10 +36,26 @@
             getDashboardMetric: getDashboardMetric,
             // Application specific methods.
             getGeoClientInformation: getGeoClientInformation,
-            getVersion: getVersion
+            getVersion: getVersion,
+            getFare: getFare
         };
 
         return service;
+
+        function getFare(cabRide) {
+            return $http.post('api/cabRides/GetFare', { cache: false })
+                        .then(getFareCompleted, getFareFailed);
+
+            function getFareCompleted(response) {
+                return response.data;
+            }
+
+            function getFareFailed(error) {
+                errorService.handleError(error);
+
+                return $q.reject(error);
+            }
+        }
 
         function addEntity(entityDataStore, entity, showToaster, successMessage, failureMessage) {
             return $http.post(odataUrl + entityDataStore, entity).then(addEntityComplete, addEntityFailed);

@@ -22,9 +22,9 @@
         }
 
         function addEntity(entity) {
-            entity.fileModel = undefined;
+            entity.dateTime = entity.date + ' ' + entity.time
 
-            return dataService.getFare(vm.entityDataStore, entity).then(function (data) {
+            return dataService.getFare(entity).then(function (data) {
                 toaster.pop('success', data);
 
                 vm.result = data;

@@ -43,7 +43,7 @@
         return service;
 
         function getFare(cabRide) {
-            return $http.post('api/cabRides/GetFare', { cache: false })
+            return $http.post('api/cabRides/GetFare', cabRide)
                         .then(getFareCompleted, getFareFailed);
 
             function getFareCompleted(response) {

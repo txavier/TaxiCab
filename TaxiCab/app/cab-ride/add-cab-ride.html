@@ -28,25 +28,25 @@
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Number of minutes while traveling above 6 mph</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" data-ng-model="vm.cabRide.minutesAboveSixMph" placeholder="Number of minutes while traveling above 6 mph">
+                                    <input type="text" class="form-control" data-ng-model="vm.cabRide.minutesAboveSixMph" placeholder="Number of minutes while traveling above 6 mph" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Number of miles traveled while traveling below 6 mph</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" data-ng-model="vm.cabRide.milesBelowSixMph" placeholder="Number of miles traveled while traveling below 6 mph">
+                                    <input type="text" class="form-control" data-ng-model="vm.cabRide.milesBelowSixMph" placeholder="Number of miles traveled while traveling below 6 mph" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Date</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" data-ng-model="vm.cabRide.dateTime" placeholder="date">
+                                    <input type="text" class="form-control" data-ng-model="vm.cabRide.date" placeholder="date" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="col-md-2 control-label">Time</label>
                                 <div class="col-md-10">
-                                    <input type="text" class="form-control" data-ng-model="vm.cabRide.time" placeholder="time">
+                                    <input type="text" class="form-control" data-ng-model="vm.cabRide.time" placeholder="time" required>
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary pull-right" data-ng-click="vm.addEntity(vm.cabRide)">Save</button>

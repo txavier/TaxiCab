@@ -21,6 +21,7 @@ namespace TaxiCab.Core.Models
             public int milesBelowSixMph { get; set; }
 
             [DisplayName("date")]
+            [Range(typeof(DateTime), "01/10/1900", "01/12/3000")]
             public DateTime dateTime { get; set; }
         }
     }

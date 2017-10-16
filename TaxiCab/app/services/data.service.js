@@ -51,8 +51,10 @@
             }
 
             function getFareFailed(error) {
-                errorService.handleError(error);
+                errorService.handleError(error, true, null, null);
 
+                // If there is a failure method the below line will have it called.
+                // http://stackoverflow.com/questions/28076258/reject-http-promise-on-success
                 return $q.reject(error);
             }
         }

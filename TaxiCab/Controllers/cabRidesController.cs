@@ -23,11 +23,16 @@ namespace TaxiCab.Controllers
         }
 
         [HttpPost]
-        public double GetFare(cabRide cabRide)
+        public IHttpActionResult GetFare(cabRide cabRide)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+            
             var result = _cabRideService.GetFare(cabRide, User?.Identity?.Name);
 
-            return result;
+            return Ok(result);
         }
     }
 }

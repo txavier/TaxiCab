@@ -22,6 +22,20 @@
         }
 
         function addEntity(entity) {
+            if (!vm.myForm.$valid) {
+                var errors = [];
+
+                for (var key in vm.myForm.$error) {
+                    for (var index = 0; index < vm.myForm.$error[key].length; index++) {
+                        errors.push(vm.myForm.$error[key][index].$name + ' is required.');
+                    }
+                }
+
+                toaster.pop('warning', 'Information Missing', 'The ' + errors[0]);
+
+                return;
+            }
+
             entity.dateTime = entity.date + ' ' + entity.time
 
             return dataService.getFare(entity).then(function (data) {
